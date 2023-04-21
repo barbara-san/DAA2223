@@ -15,7 +15,6 @@ struct compareAAA {
     }
 };
 
-
 int main() {
     int m, n;
     cin >> m;
@@ -29,7 +28,6 @@ int main() {
     sort(b, b+n, compareAAA());
 
     int end = 0, count = 0, tmp = 0;
-
     while (end < m) {
         for (int j = 0; j < n; j++) {
             if (b[j].i <= end && b[j].f > tmp) tmp = b[j].f;
@@ -38,7 +36,6 @@ int main() {
         end = tmp;
         tmp = 0;
     }
-
     cout << count << endl;
 
     return 0;

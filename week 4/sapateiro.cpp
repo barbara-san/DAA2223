@@ -21,7 +21,6 @@ struct compareAAA {
     }
 };
 
-
 int main() {
     int n;
     cin >> n;
@@ -37,8 +36,6 @@ int main() {
     for (int j = 0; j < n; j++) {
         b[j].sum = sum - b[j].multa;
         b[j].sum *= b[j].days;
-        
-        //cout << b[j].order << ' ' << b[j].ratio << ' ' << b[j].sum << endl;
     }
 
     sort(b, b+n, compareAAA());
@@ -54,7 +51,6 @@ int main() {
         }
         sort(b, b+n, compareAAA());
     }
-
     cout << '\n';
 
     return 0;
