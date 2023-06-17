@@ -32,7 +32,6 @@ int main() {
 
 
     for (int i = 0; i < n - 1; i++) {
-        //if (!letters.contains(words[i].at(j)));
         int size = min(words[i].length(), words[i+1].length());
         for (int j = 0; j < size; j++) {
             if (!letters.count(words[i].at(j))) {
@@ -45,8 +44,6 @@ int main() {
                 int a = words[i].at(j) - 'A';
                 int b = words[i+1].at(j) - 'A';
                 adj[a][b] = true;
-                //cout << a << ' ' << b << endl;
-                //cout << adj[a][b] << endl;
                 break;
             }
         }
@@ -63,4 +60,3 @@ int main() {
     
     return 0;
 }
-

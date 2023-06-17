@@ -8,8 +8,6 @@ bool visited[MAX][MAX];
 void dfs(int l, int c, int size1, int size2, int &count) {
     visited[l][c] = true;
     count++;
-    //cout << count << ' ';
-    //cout << "(" << l << "," << c << ")" << endl;
 
     int bbb, bb, ttt, tt;
     if (l-1 < 0) bbb = l;
@@ -20,9 +18,6 @@ void dfs(int l, int c, int size1, int size2, int &count) {
     else bb = l;
     if (c+1 <= size2-1) tt = c+1;
     else tt = c;
-
-    //cout << "[" << bbb << "," << bb << "]" << endl;
-    //cout << "[" << ttt << "," << tt << "]" << endl;
 
     for (int b = bbb; b < bb+1; b++) {
         for (int t = ttt; t < tt+1; t++) {
@@ -59,9 +54,7 @@ int main() {
                 char s; cin >> s;
                 if (s == '.') {p[j][k] = false; visited[j][k] = true;}
                 else p[j][k] = true;
-                //cout << p[j][k] << " ";
             }
-            //cout << endl;
         }
 
         cout << tamanho(l, c) << endl;
